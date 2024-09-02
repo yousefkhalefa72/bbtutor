@@ -9,9 +9,10 @@ HMM_DIR = "${TOPDIR}/HMM"
 
 do_build() {
     
-    # Check if the directory exists
+    # Check if the directory doesn't exist
     if [ ! -d "${HMM_DIR}" ]; then
         echo "fetching ${SRC_URI} into ${HMM_DIR}"
+        # create the HMM directory in build/
         mkdir "${HMM_DIR}"
         # Clone the repository into the directory
         git clone "${SRC_URI}" "${HMM_DIR}"
