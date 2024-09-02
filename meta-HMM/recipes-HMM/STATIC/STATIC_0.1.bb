@@ -6,13 +6,15 @@ OUTDIR="${TOPDIR}/OUTPUT/static"
 
 do_build() {
 
+	# Create OUTPUT dir under build/ if not exist
 	if [ ! -d "${TOPDIR}/OUTPUT" ]; then
 		echo "create dir ${TOPDIR}/OUTPUT"
 		mkdir ${TOPDIR}/OUTPUT
         else
 		echo "Directory ${TOPDIR}/OUTPUT already exists."
 	fi
-	
+
+	# Create Shared lib under build/OUTPUT/STATIC if not exist
 	if [ ! -d "${OUTDIR}" ]; then	
 		echo "create STATIC LIB ${OUTDIR}"	
 	    	mkdir ${OUTDIR}
