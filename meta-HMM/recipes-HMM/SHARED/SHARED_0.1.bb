@@ -5,6 +5,7 @@ HMM_C="${TOPDIR}/HMM/HMM.c"
 OUTDIR="${TOPDIR}/OUTPUT/shared"
 
 do_build() {
+	# Create OUTPUT dir if not exist in build/
 	if [ ! -d "${TOPDIR}/OUTPUT" ]; then
 		echo "create dir ${TOPDIR}/OUTPUT"
 		mkdir ${TOPDIR}/OUTPUT
@@ -12,6 +13,7 @@ do_build() {
 		echo "Directory ${TOPDIR}/OUTPUT already exists."
 	fi
 
+	# Create Shared lib under build/OUTPUT/SHARED if not exist
 	if [ ! -d "${OUTDIR}" ]; then	
 		echo "create SHARED LIB ${OUTDIR}"	
 	    	mkdir ${OUTDIR}
